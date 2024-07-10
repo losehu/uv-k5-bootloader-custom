@@ -40,7 +40,7 @@ jobs: #定义工作流程
         run: |
           mkdir -p output
           cp -p bl.json output/
-          cp -p L_BL002.bin output/
+          cp -p *.bin output/
 
       - name: Upload files
         run: |
