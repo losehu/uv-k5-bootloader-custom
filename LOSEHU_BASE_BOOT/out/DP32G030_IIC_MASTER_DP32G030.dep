@@ -1,0 +1,331 @@
+Dependencies for Project 'DP32G030_IIC_MASTER', Target 'DP32G030': (DO NOT MODIFY !)
+F (.\APP\main.c)(0x668E2954)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/main.o -MD)
+I (HARDWARE\uart.h)(0x63DC6E1D)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+I (HARDWARE\delay.h)(0x60175E70)
+I (HARDWARE\iic_master_check.h)(0x614C4BE0)
+I (HARDWARE\iic_master_int.h)(0x614C63E2)
+I (HARDWARE\led.h)(0x668E0960)
+I (HARDWARE\key.h)(0x668E0960)
+I (APP\iap.h)(0x6232D2C7)
+I (APP\eeprom.h)(0x668E2519)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5B739900)
+I (APP\port.h)(0x668D4A9E)
+F (.\APP\iap.c)(0x668D41F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/iap.o -MD)
+I (APP\iap.h)(0x6232D2C7)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\APP\eeprom.c)(0x668E2519)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/eeprom.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5B739900)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5B739900)
+I (APP\i2c.h)(0x668E28BC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B739900)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (APP\port.h)(0x668D4A9E)
+I (HARDWARE\delay.h)(0x60175E70)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\APP\i2c.c)(0x668E28A2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/i2c.o -MD)
+I (APP\i2c.h)(0x668E28BC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5B739900)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (APP\port.h)(0x668D4A9E)
+I (HARDWARE\delay.h)(0x60175E70)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.c)(0x651FB223)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/dp32g030_flash.o -MD)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.c)(0x668D49CB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/dp32g030_gpio.o -MD)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\CSL\DP32G030_StdPeriph_Driver\DP32G030_port.c)(0x651FB1E3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/dp32g030_port.o -MD)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\CSL\CMSIS\DeviceSupport\system_DP32G030.c)(0x668E097D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/system_dp32g030.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\CSL\CMSIS\DeviceSupport\startup\arm\startup_DP32G030.s)(0x668380B4)(--cpu Cortex-M0 -g --pd "__MICROLIB SETA 1"-I.\RTE\_DP32G030-IC:\Keil_v5\ARM\PACK\DP\DP32_DFP\2.0.2\CSL\DP32G030\CMSIS\DeviceSupport-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 527"--list .\out\startup_dp32g030.lst--xref -o .\out\startup_dp32g030.o--depend .\out\startup_dp32g030.d)
+F (.\HARDWARE\delay.c)(0x63EF2D04)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/delay.o -MD)
+I (HARDWARE\delay.h)(0x60175E70)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)
+F (.\HARDWARE\key.c)(0x668E0960)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -fno-ldm-stm -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./CSL/CMSIS/CoreSupport -I ./CSL/CMSIS/DeviceSupport -I ./HARDWARE -I ./CSL/DP32G030_StdPeriph_Driver-I./RTE/_DP32G030-IC:/Keil_v5/ARM/PACK/DP/DP32_DFP/2.0.2/CSL/DP32G030/CMSIS/DeviceSupport-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="527"-o ./out/key.o -MD)
+I (HARDWARE\key.h)(0x668E0960)
+I (HARDWARE\common.h)(0x651FB19C)
+I (CSL\CMSIS\DeviceSupport\DP32G030.h)(0x668D15A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5B739900)
+I (CSL\CMSIS\CoreSupport\core_cmInstr.h)(0x542135E0)
+I (CSL\CMSIS\CoreSupport\core_cmFunc.h)(0x668DAF95)
+I (CSL\CMSIS\DeviceSupport\system_DP32G030.h)(0x622802BA)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_port.h)(0x651FB1AF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_gpio.h)(0x651FB211)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_flash.h)(0x651FB21D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_conf.h)(0x651FB24B)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_uart.h)(0x651FB29F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_exti.h)(0x651FB229)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_spi.h)(0x651FB320)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iic.h)(0x651FB203)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmbase.h)(0x651FB360)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_pwmplus.h)(0x651FB350)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerbase.h)(0x651FB2DF)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_timerplus.h)(0x651FB2A9)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_iwdt.h)(0x651FB1F8)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_wwdt.h)(0x651FB273)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_crc.h)(0x651FB23D)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_rtc.h)(0x651FB443)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_dma.h)(0x651FB234)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_aes.h)(0x651FB25F)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_power.h)(0x651FB333)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_adc.h)(0x651FB268)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_cmp.h)(0x651FB252)
+I (CSL\DP32G030_StdPeriph_Driver\DP32G030_opa.h)(0x651FB1EA)

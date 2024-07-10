@@ -1,0 +1,16 @@
+--cpu Cortex-M0
+".\out\main.o"
+".\out\iap.o"
+".\out\eeprom.o"
+".\out\i2c.o"
+".\out\dp32g030_flash.o"
+".\out\dp32g030_gpio.o"
+".\out\dp32g030_port.o"
+".\out\system_dp32g030.o"
+".\out\startup_dp32g030.o"
+".\out\delay.o"
+".\out\key.o"
+--library_type=microlib --strict --scatter ".\out\DP32G030_IIC_MASTER.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\out\DP32G030_IIC_MASTER.map" -o .\out\DP32G030_IIC_MASTER.axf

@@ -60,14 +60,13 @@ void Main(void) {
     memset(gFrameBuffer, 0, sizeof(gFrameBuffer));
     ST7565_BlitStatusLine();
     ST7565_BlitFullScreen();
-uint8_t boot_mode = 0;
+    uint8_t boot_mode = 0;
     bool mode = 0;
 
-    EEPROM_ReadBuffer(0X01FF0,(uint8_t*)&boot_mode,1);
-if(boot_mode==2)
-{
-    mode = 1;
-}
+    EEPROM_ReadBuffer(0X01FF0, (uint8_t * ) & boot_mode, 1);
+    if (boot_mode == 2) {
+        mode = 1;
+    }
     if (mode) {
         GPIO_SetBit(&GPIOC->DATA, GPIOC_PIN_FLASHLIGHT);
         GPIO_ClearBit(&GPIOB->DATA, GPIOB_PIN_BACKLIGHT);
@@ -88,7 +87,6 @@ if(boot_mode==2)
             if (uart_flag == 0) {
                 UART_Send(send_data, 44);
                 cnt = 0;
-
             }
 
         }
@@ -99,5 +97,7 @@ if(boot_mode==2)
         }
         cnt++;
     }
-
 }
+
+
+

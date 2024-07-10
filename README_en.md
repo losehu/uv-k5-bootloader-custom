@@ -2,41 +2,39 @@
 
 **语言版本: [English](README_en.md), [中文](README.md).**
 
-# A Bootloader for Larger Capacity Firmware/Firmware Switching on Quansheng UVK5
 
-## Functional Description
-* Reads firmware from EEPROM and writes it to flash to switch firmware.
-* Reads valid firmware stored in EEPROM and allows selection via a button press.
+# Bootloader for Quansheng UVK5 Firmware Switching
 
-## Principle Explanation
-* The DP32G030 chip has 64KB of flash and 16KB of RAM.
-    * Out of the 64KB flash, 4KB is used for the bootloader that writes programs, leaving 60KB for custom firmware.
-    * Due to the flash size limitation, the custom firmware can only be up to 60KB.
-    * The custom firmware requires slightly less than 4KB of RAM to store data, and 128B of stack space, leaving about 12KB.
-    * A small program can be added to the custom firmware with the following content:
-        * Triggered by a certain button press.
-        * Reads the bootloader of this project from the EEPROM and loads it to the last 12K address in the RAM.
-        * Jumps to the RAM to execute the bootloader of this project.
-        * The bootloader reads valid firmware from the EEPROM and allows selection via a button press.
-        * The selected firmware is read from the EEPROM, written to the flash, and then jumps to the entry address of the firmware.
-        * After startup, firmware switching/APP loading is achieved.
+# Function Description
+* Capable of reading firmware from EEPROM and writing it to flash, allowing switching between different firmware versions.
+* Reads valid firmware from EEPROM and allows selection via button press for loading.
 
-## Conditions of Use
-* Due to language requirements, approximately 150KB is needed for Chinese input method, so this bootloader is only suitable for UVK5 with 4MiB (512KB) EEPROM.
-* For each firmware stored in the EEPROM, approximately 250B of a jump program segment is required to load the bootloader to RAM, which is simple.
-* Due to flash size limitations, the size of a single firmware still cannot exceed 60KB.
+# Principle Description
+* Rewrite the UV-K5 bootloader to load Bootloader B into RAM from EEPROM on startup, then jump to Bootloader B in RAM.
+* Bootloader B:
+    * Reads firmware from EEPROM and writes it to FLASH.
+    * Supports traditional burning communication protocols.
 
-## Sponsorship
+# Requirements
+* Due to language requirements (Chinese input method), approximately 150KB is needed, so this bootloader is only suitable for UVK5 with 4Mib (512KB) EEPROM.
+* Due to flash size limitations, individual firmware size should not exceed 60KB.
+* Requires ST-Link to flash the new bootloader into UVK5's FLASH.
 
-If this project has been helpful to you, consider donating to support the development work.
+# Instructions
+* Refer to the losehu Bootloader Manual.pdf in this directory.
 
-Here is the [Sponsorship List](https://losehu.github.io/payment-codes/#%E6%94%B6%E6%AC%BE%E7%A0%81). Many thanks to everyone for their support!
+# Donations
 
-Donation code:
+If this project has been helpful to you, consider sponsoring to support further development work.
 
-[![Donation Code](https://github.com/losehu/uv-k5-firmware-chinese/blob/main/payment/show.png)](https://losehu.github.io/payment-codes/)
+Here is the [list of sponsors](https://losehu.github.io/payment-codes/#%E6%94%B6%E6%AC%BE%E7%A0%81). Thank you very much for your support!
 
-## Disclaimer:
-* **No Liability**
-* The radio may become bricked during the flashing process, for which I am not responsible.
-* I do not assume any legal responsibility. This project is open-source, and you are free to use it, but you must take responsibility for your actions.
+Donation QR code:
+
+[![Donation QR code](https://github.com/losehu/uv-k5-firmware-chinese/blob/main/payment/show.png)](https://losehu.github.io/payment-codes/)
+
+# Disclaimer:
+
+* **I am not responsible**
+* Radios may be bricked during the flashing process, and I am not responsible for this.
+* I do not assume any legal responsibility. This project is open source; you are free to use it, but you must be responsible for your actions.
