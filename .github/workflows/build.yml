@@ -17,7 +17,8 @@ jobs: #定义工作流程
             python-pip \
             python-crcmod \
             lftp    \
-            python-requests
+            python-requests \
+            zip 
 
 
       - name: Checkout #拉取代码
@@ -50,3 +51,19 @@ jobs: #定义工作流程
           put output/losehu.zip
           bye
           EOF
+
+      - name: Call API
+        env:
+          API_URL: ${{ secrets.API_URL }}
+        run: |
+          python -c "
+          import time
+          import requests
+          import os
+          timestamp = int(time.time())
+          url = f'{os.getenv('API_URL')}?v={timestamp}'
+          response = requests.get(url)
+          if response.status_code == 200:
+            print('API called successfully')
+          else:
+            print(f'Failed to call API: {response.status_code}')"
