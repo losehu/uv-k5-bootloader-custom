@@ -13,7 +13,7 @@
  *     See the License for the specific language governing permissions and
  *     limitations under the License.
  */
-
+#include "../driver/system.h"
 #include <string.h>
 #include "font.h"
 #include "../external/CMSIS_5/Device/ARM/ARMCM0/Include/ARMCM0.h"

@@ -51,6 +51,7 @@ void JUMP_TO_FLASH(uint32_t flash_add,uint32_t stack_add)__attribute__((section(
 void CP_EEPROM_TO_FLASH(uint32_t eeprom_add,uint32_t flash_add,uint32_t size)__attribute__((section(".sramtext")));
 void Erase_Flash(uint32_t sector)__attribute__((section(".sramtext")));
 void write_to_memory(uint32_t address, uint32_t data) ;
+void ProgramMoreWords(uint32_t DestAddr, const uint32_t *words, uint32_t num)__attribute__((section(".sramtext")));
 
 #endif
 
