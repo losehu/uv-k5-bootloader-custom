@@ -16,6 +16,8 @@ jobs: #定义工作流程
             git \
             python-pip \
             python-crcmod \
+            lftp    
+
 
       - name: Checkout #拉取代码
         uses: actions/checkout@v3 #使用 GitHub Actions 提供的 checkout 动作
