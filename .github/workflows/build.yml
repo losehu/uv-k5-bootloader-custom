@@ -40,12 +40,14 @@ jobs: #定义工作流程
         run: |
           mkdir -p output
           cp -p bl.json output/
+          cp -p L_BL002.bin output/
 
       - name: Upload files
         run: |
           echo "Uploading Bootloader to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
           put output/bl.json
+          put output/L_BL002.bin
           bye
           EOF
 
