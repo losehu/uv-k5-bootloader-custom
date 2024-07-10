@@ -47,7 +47,7 @@ jobs: #定义工作流程
           echo "Uploading Bootloader to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
           put output/bl.json
-          put output/L_BL002.bin
+          put output/*.bin
           bye
           EOF
 
