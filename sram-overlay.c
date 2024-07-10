@@ -242,24 +242,33 @@ void ProgramWords(uint32_t DestAddr, uint32_t words) {
 //CP_EEPROM_TO_FLASH(0x5000,0xa000,10*1024);
 void CP_EEPROM_TO_FLASH(uint32_t eeprom_add, uint32_t flash_add, uint32_t size) {
     char str[20];
-    for (int i = 0; i < size / 4; ++i) {
-        uint32_t c;
-        EEPROM_ReadBuffer(eeprom_add + i * 4, (uint8_t *) &c, 4);
+    for (int i = 0; i < size / 128; ++i) {
+        uint32_t c[32];
+        EEPROM_ReadBuffer(eeprom_add + i * 128, (uint8_t *) &c, 128);
 
-        ProgramWords(i * 4 + flash_add, c);
-        uint32_t d = overlay_FLASH_ReadByAHB(i * 4 + flash_add);
-        if (d != c) {
-            memset(gFrameBuffer, 0, sizeof(gFrameBuffer));
-            UI_PrintStringSmall("Flash Failed!", 0, 127, 2);
-//            UI_PrintStringSmall("Please Reboot!", 0, 127, 4);
-            ST7565_BlitFullScreen();
-            while(1);
-        }
-        if (i % 512 == 0) {
-            sprintf(str, "Load: %02d%%", i * 100 / (size / 4));
+//        ProgramWords(i * 128 + flash_add, c);
+
+        ProgramMoreWords(i * 128 + flash_add, c, 32);
+//        uint32_t d = overlay_FLASH_ReadByAHB(i * 4 + flash_add);
+//        if (d != c) {
+//            memset(gFrameBuffer, 0, sizeof(gFrameBuffer));
+//            UI_PrintStringSmall("Flash Failed!", 0, 127, 2);
+////            UI_PrintStringSmall("Please Reboot!", 0, 127, 4);
+//            ST7565_BlitFullScreen();
+//            while(1);
+//        }
+//        if (i % 512 == 0) {
+//            sprintf(str, "Load: %02d%%", i * 100 / (size / 4));
+//            UI_PrintStringSmall(str, 20, 0, 2);
+//            ST7565_BlitFullScreen();
+//        }
+
+        if (i % 16 == 0) {
+            sprintf(str, "Load: %02d%%", i * 100 / (size / 128));
             UI_PrintStringSmall(str, 20, 0, 2);
             ST7565_BlitFullScreen();
         }
+
     }
 
 }
