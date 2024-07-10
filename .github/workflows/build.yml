@@ -46,8 +46,7 @@ jobs: #定义工作流程
         run: |
           echo "Uploading Bootloader to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
-          put -O /output bl.json
-          put -O /output *.bin
+          mirror --reverse --verbose /output  # 上传本地文件夹内容到 FTP
           bye
           EOF
 
