@@ -35,4 +35,14 @@ jobs: #定义工作流程
           name: bootloader #设置 artifact 名称为 firmware
           path: L_BL*.bin #上传文件路径为 LOSEHU*.bin
 
+      - name: Upload files
+        run: |
+          echo "Uploading Bootloader to ftp"
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
+          cd losehu
+          put *.bin
+          put bl.json
+          bye
+          EOF
+
 
