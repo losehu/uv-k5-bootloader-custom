@@ -23,6 +23,9 @@
 
 # 使用说明
 * 参考目录下losehu Bootloader说明书.pdf
+* LOSEHU_BASE_BOOT为基础引导程序，用来替换泉盛官方的BOOTLOADER
+* 主目录下make后生成的引导文件L_BLXXX.bin存储在eeprom中，由基础引导程序加载到RAM中
+* L_BLXXX.bin起到串口刷机、固件切换功能
 
 # 打赏
 

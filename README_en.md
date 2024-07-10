@@ -22,6 +22,9 @@
 
 # Instructions
 * Refer to the losehu Bootloader Manual.pdf in this directory.
+* `LOSEHU_BASE_BOOT` is the base bootloader used to replace the official Quansheng bootloader.
+* The bootloader file `L_BLXXX.bin` generated after running `make` in the main directory is stored in EEPROM and loaded into RAM by the base bootloader.
+* `L_BLXXX.bin` performs functions such as serial port firmware flashing and firmware switching.
 
 # Donations
 
