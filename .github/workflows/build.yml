@@ -36,7 +36,7 @@ jobs: #定义工作流程
       - name: Create ZIP file
         run: |
           mkdir -p output
-          zip -j output/losehu.zip ./*.bin ./function.json
+          zip -j output/losehu.zip ./*.bin ./bl.json
 
       - name: Upload ALL #上传固件文件
         uses: actions/upload-artifact@v3 #使用 GitHub Actions 提供的 upload-artifact 动作
