@@ -16,7 +16,8 @@ jobs: #定义工作流程
             git \
             python-pip \
             python-crcmod \
-            lftp    
+            lftp    \
+            python-requests
 
 
       - name: Checkout #拉取代码
@@ -31,24 +32,21 @@ jobs: #定义工作流程
       - name: size #计算 firmware 大小
         run: arm-none-eabi-size L_BL #使用 arm-none-eabi-size 命令计算固件大小
 
-      - name: Upload Artifact #上传固件文件
-        uses: actions/upload-artifact@v3 #使用 GitHub Actions 提供的 upload-artifact 动作
-        with:
-          name: bootloader #设置 artifact 名称为 firmware
-          path: L_BL*.bin #上传文件路径为 LOSEHU*.bin
-      - name: get file
+      - name: Create ZIP file
         run: |
           mkdir -p output
-          cp -p bl.json output/
-          cp -p *.bin output/
+          zip -j output/losehu.zip ./*.bin ./function.json
+
+      - name: Upload ALL #上传固件文件
+        uses: actions/upload-artifact@v3 #使用 GitHub Actions 提供的 upload-artifact 动作
+        with:
+          name: firmware_all #设置 artifact 名称为 firmware
+          path: output/losehu.zip #上传文件路径为 LOSEHU*.bin
 
       - name: Upload files
         run: |
-          echo "Uploading Bootloader to ftp"
+          echo "Uploading LOSEHU.zip to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
-          put output/bl.json
-          put output/L_BL*.bin
+          put output/losehu.zip
           bye
           EOF
-
-
