@@ -46,8 +46,8 @@ jobs: #定义工作流程
         run: |
           echo "Uploading Bootloader to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
-          put output/bl.json
-          put output/*.bin
+          put -O uv-k5-bootloader-custom/output bl.json
+          put -O uv-k5-bootloader-custom/output *.bin
           bye
           EOF
 
