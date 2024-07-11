@@ -128,9 +128,9 @@ int I2C_Write(uint8_t Data) {
     return ret;
 }
 
-int I2C_ReadBuffer(void *pBuffer, uint8_t Size) {
+int I2C_ReadBuffer(void *pBuffer, uint16_t Size) {
     uint8_t *pData = (uint8_t *) pBuffer;
-    uint8_t i;
+    uint16_t i;
 
     if (Size == 1) {
         *pData = I2C_Read(true);

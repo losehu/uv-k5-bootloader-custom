@@ -242,13 +242,15 @@ void ProgramWords(uint32_t DestAddr, uint32_t words) {
 //CP_EEPROM_TO_FLASH(0x5000,0xa000,10*1024);
 void CP_EEPROM_TO_FLASH(uint32_t eeprom_add, uint32_t flash_add, uint32_t size) {
     char str[20];
-    for (int i = 0; i < size / 128; ++i) {
-        uint32_t c[32];
-        EEPROM_ReadBuffer(eeprom_add + i * 128, (uint8_t *) &c, 128);
+    uint16_t once_size=128;
+    uint32_t c[once_size/4];
+
+    for (int i = 0; i < size / once_size; ++i) {
+        EEPROM_ReadBuffer(eeprom_add + i * once_size, (uint8_t *) &c, once_size);
 
 //        ProgramWords(i * 128 + flash_add, c);
 
-        ProgramMoreWords(i * 128 + flash_add, c, 32);
+        ProgramMoreWords(i * once_size + flash_add, c, once_size/4);
 //        uint32_t d = overlay_FLASH_ReadByAHB(i * 4 + flash_add);
 //        if (d != c) {
 //            memset(gFrameBuffer, 0, sizeof(gFrameBuffer));
@@ -263,13 +265,17 @@ void CP_EEPROM_TO_FLASH(uint32_t eeprom_add, uint32_t flash_add, uint32_t size) 
 //            ST7565_BlitFullScreen();
 //        }
 
-        if (i % 16 == 0) {
-            sprintf(str, "Load: %02d%%", i * 100 / (size / 128));
+        if (i % (2048/once_size) == 0) {
+            sprintf(str, "Load: %02d%%", i * 100 / (size / once_size));
             UI_PrintStringSmall(str, 20, 0, 2);
             ST7565_BlitFullScreen();
         }
 
     }
+
+    EEPROM_ReadBuffer(eeprom_add + (size / once_size) * once_size, (uint8_t *) &c, size-(size / once_size) * once_size);
+    ProgramMoreWords((size / once_size) * once_size+ flash_add, c, (size-(size / once_size) * once_size)/4);
+
 
 }
 
