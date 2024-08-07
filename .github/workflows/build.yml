@@ -1,12 +1,12 @@
-on: #Ö¸¶¨´¥·¢ workflow µÄÊÂ¼ş
-  push: #µ±´úÂëÍÆËÍÊ±´¥·¢
+on: #æŒ‡å®šè§¦å‘ workflow çš„äº‹ä»¶
+  push: #å½“ä»£ç æ¨é€æ—¶è§¦å‘
 
-jobs: #¶¨Òå¹¤×÷Á÷³Ì
-  build: #¹¤×÷Á÷Ãû³ÆÎª build
-    runs-on: ubuntu-22.04 #Ê¹ÓÃ Ubuntu 22.04 »·¾³Ö´ĞĞ
-    container: #¶¨ÒåÈİÆ÷
-      image: archlinux:latest #Ê¹ÓÃ Arch Linux ¾µÏñ
-    steps: #¶¨Òå¹¤×÷Á÷³ÌÖĞµÄ²½Öè
+jobs: #å®šä¹‰å·¥ä½œæµç¨‹
+  build: #å·¥ä½œæµåç§°ä¸º build
+    runs-on: ubuntu-22.04 #ä½¿ç”¨ Ubuntu 22.04 ç¯å¢ƒæ‰§è¡Œ
+    container: #å®šä¹‰å®¹å™¨
+      image: archlinux:latest #ä½¿ç”¨ Arch Linux é•œåƒ
+    steps: #å®šä¹‰å·¥ä½œæµç¨‹ä¸­çš„æ­¥éª¤
       - name: Install dependencies
         run: |
           pacman -Syyu --noconfirm \
@@ -21,33 +21,34 @@ jobs: #¶¨Òå¹¤×÷Á÷³Ì
             zip 
 
 
-      - name: Checkout #À­È¡´úÂë
-        uses: actions/checkout@v3 #Ê¹ÓÃ GitHub Actions Ìá¹©µÄ checkout ¶¯×÷
+      - name: Checkout #æ‹‰å–ä»£ç 
+        uses: actions/checkout@v3 #ä½¿ç”¨ GitHub Actions æä¾›çš„ checkout åŠ¨ä½œ
 
-      - name: safe.directory #ÉèÖÃ git µÄ safe.directory ÅäÖÃ
+      - name: safe.directory #è®¾ç½® git çš„ safe.directory é…ç½®
         run: git config --global --add safe.directory /__w/uv-k5-bootloader-custom/uv-k5-bootloader-custom
 
-      - name: Make #Ö´ĞĞ make ÃüÁî
-        run: make test  #±àÒëÏîÄ¿
+      - name: Make #æ‰§è¡Œ make å‘½ä»¤
+        run: make test  #ç¼–è¯‘é¡¹ç›®
 
-      - name: size #¼ÆËã firmware ´óĞ¡
-        run: arm-none-eabi-size L_BL #Ê¹ÓÃ arm-none-eabi-size ÃüÁî¼ÆËã¹Ì¼ş´óĞ¡
+      - name: size #è®¡ç®— firmware å¤§å°
+        run: arm-none-eabi-size L_BL #ä½¿ç”¨ arm-none-eabi-size å‘½ä»¤è®¡ç®—å›ºä»¶å¤§å°
 
       - name: Create ZIP file
         run: |
           mkdir -p output
           zip -j output/losehu.zip ./*.bin ./bl.json
 
-      - name: Upload ALL #ÉÏ´«¹Ì¼şÎÄ¼ş
-        uses: actions/upload-artifact@v3 #Ê¹ÓÃ GitHub Actions Ìá¹©µÄ upload-artifact ¶¯×÷
+      - name: Upload ALL #ä¸Šä¼ å›ºä»¶æ–‡ä»¶
+        uses: actions/upload-artifact@v3 #ä½¿ç”¨ GitHub Actions æä¾›çš„ upload-artifact åŠ¨ä½œ
         with:
-          name: firmware_all #ÉèÖÃ artifact Ãû³ÆÎª firmware
-          path: output/losehu.zip #ÉÏ´«ÎÄ¼şÂ·¾¶Îª LOSEHU*.bin
+          name: firmware_all #è®¾ç½® artifact åç§°ä¸º firmware
+          path: output/losehu.zip #ä¸Šä¼ æ–‡ä»¶è·¯å¾„ä¸º LOSEHU*.bin
 
       - name: Upload files
         run: |
           echo "Uploading LOSEHU.zip to ftp"
           lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }} <<EOF
+          set ssl:verify-certificate no
           put output/losehu.zip
           bye
           EOF
