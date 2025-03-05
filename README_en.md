@@ -18,7 +18,7 @@
 # Requirements
 * Due to language requirements (Chinese input method), approximately 150KB is needed, so this bootloader is only suitable for UVK5 with 4Mib (512KB) EEPROM.
 * Due to flash size limitations, individual firmware size should not exceed 60KB.
-* Requires ST-Link to flash the new bootloader into UVK5's FLASH.
+* Requires ST-Link（or J-Link） to flash the new bootloader into UVK5's FLASH.
 
 # Instructions
 * Refer to the losehu Bootloader Manual.pdf in this directory.
