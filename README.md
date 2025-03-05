@@ -19,7 +19,7 @@
 # 使用条件
 * 受到语言影响，需要大约150KB用于中文输入法，所以此引导程序只适用于4Mib(512KB)EEPROM的UVK5。
 * 由于FLASH大小限制，单个固件的大小仍然不能超过60KB。
-* 需要ST-Link将新的引导程序刷入UVK5的FLASH。
+* 需要ST-Link（或者J-Link）将新的引导程序刷入UVK5的FLASH。
 
 # 使用说明
 * 参考目录下losehu Bootloader说明书.pdf
