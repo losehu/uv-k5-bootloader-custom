@@ -1,3 +1,6 @@
+# **Manual**
+Please take a look at the [Online Manual (see Wiki)](https://github.com/losehu/uv-k5-bootloader-custom/wiki) for instructions, tips and more
+
 **Read this in other languages: [English](README_en.md), [中文](README.md).**
 
 **语言版本: [English](README_en.md), [中文](README.md).**
