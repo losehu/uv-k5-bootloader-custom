@@ -5,11 +5,11 @@
 #include "string.h"
 #include "port.h"
 // void write_to_memory(uint32_t address, uint32_t data) {
-//    // ½«µØÖ·ÊıÖµ×ª»»ÎªÖ¸Õë
+//    // å°†åœ°å€æ•°å€¼è½¬æ¢ä¸ºæŒ‡é’ˆ
 //    uint32_t *target_address = (uint32_t *) address;
-//    // ÏòÄ¿±êµØÖ·Ğ´ÈëÊı¾İ
+//    // å‘ç›®æ ‡åœ°å€å†™å…¥æ•°æ®
 //    *target_address = data;
-//    // ÎªÁË±ÜÃâÓÅ»¯£¬È·±£´úÂë²»»á±»ÓÅ»¯µô
+//    // ä¸ºäº†é¿å…ä¼˜åŒ–ï¼Œç¡®ä¿ä»£ç ä¸ä¼šè¢«ä¼˜åŒ–æ‰
 //    volatile uint32_t read_back = *target_address;
 //	 
 //}
@@ -23,62 +23,95 @@ void jump_to_app(void) {
     uint32_t JumpAddress;
     pFunction Jump_To_Application;
 
-    /* ¼ì²éÕ»¶¥µØÖ·ÊÇ·ñºÏ·¨ */
+    /* æ£€æŸ¥æ ˆé¡¶åœ°å€æ˜¯å¦åˆæ³• */
 
-    /* ÆÁ±ÎËùÓĞÖĞ¶Ï£¬·ÀÖ¹ÔÚÌø×ª¹ı³ÌÖĞ£¬ÖĞ¶Ï¸ÉÈÅ³öÏÖÒì³£ */
+    /* å±è”½æ‰€æœ‰ä¸­æ–­ï¼Œé˜²æ­¢åœ¨è·³è½¬è¿‡ç¨‹ä¸­ï¼Œä¸­æ–­å¹²æ‰°å‡ºç°å¼‚å¸¸ */
     __disable_irq();
 
-    /* ÓÃ»§´úÂëÇøµÚ¶ş¸ö ×Ö Îª³ÌĞò¿ªÊ¼µØÖ·(¸´Î»µØÖ·) */
+    /* ç”¨æˆ·ä»£ç åŒºç¬¬äºŒä¸ª å­— ä¸ºç¨‹åºå¼€å§‹åœ°å€(å¤ä½åœ°å€) */
     JumpAddress = *(__IO
     uint32_t *) (APP_FLASH_ADDR + 4);
 
     /* Initialize user application's Stack Pointer */
-    /* ³õÊ¼»¯APP¶ÑÕ»Ö¸Õë(ÓÃ»§´úÂëÇøµÄµÚÒ»¸ö×ÖÓÃÓÚ´æ·ÅÕ»¶¥µØÖ·) */
+    /* åˆå§‹åŒ–APPå †æ ˆæŒ‡é’ˆ(ç”¨æˆ·ä»£ç åŒºçš„ç¬¬ä¸€ä¸ªå­—ç”¨äºå­˜æ”¾æ ˆé¡¶åœ°å€) */
     __set_MSP(*(__IO
     uint32_t *) APP_FLASH_ADDR);
 
-    /* ÀàĞÍ×ª»» */
+    /* ç±»å‹è½¬æ¢ */
     Jump_To_Application = (pFunction) JumpAddress;
 
-    /* Ìø×ªµ½ APP */
+    /* è·³è½¬åˆ° APP */
     Jump_To_Application();
 
 }
 
 
 void write_to_memory1(uint32_t address, uint32_t *data, size_t length) {
-    // ½«µØÖ·ÊıÖµ×ª»»ÎªÖ¸Õë
+    // å°†åœ°å€æ•°å€¼è½¬æ¢ä¸ºæŒ‡é’ˆ
     uint32_t *target_address = (uint32_t *) address;
 
-    // Ñ­»·Ğ´ÈëÊı¾İµ½Ä¿±êµØÖ·
+    // å¾ªç¯å†™å…¥æ•°æ®åˆ°ç›®æ ‡åœ°å€
     for (size_t i = 0; i < length; i++) {
         target_address[i] = data[i];
-        // ÎªÁË±ÜÃâÓÅ»¯£¬È·±£´úÂë²»»á±»ÓÅ»¯µô
+        // ä¸ºäº†é¿å…ä¼˜åŒ–ï¼Œç¡®ä¿ä»£ç ä¸ä¼šè¢«ä¼˜åŒ–æ‰
         volatile uint32_t read_back = target_address[i];
     }
 }
 
 
 int main(void) {
-    SystemInit();           //Ê±ÖÓ³õÊ¼»¯
+    SystemInit();           //æ—¶é’Ÿåˆå§‹åŒ–
     Key_Init();
-    delay_init();           //ÑÓÊ±³õÊ¼»¯
+    delay_init();           //å»¶æ—¶åˆå§‹åŒ–
     uint8_t boot_mode = 1;
     if (!GPIO_GetBit(KEY1_GPIO_PORT, KEY1_GPIO_PIN) || !GPIO_GetBit(GPIOA, GPIO_PIN3)) {
         if (!GPIO_GetBit(KEY1_GPIO_PORT, KEY1_GPIO_PIN)) {
             boot_mode = 2;
+			EEPROM_WriteBuffer(0X01FF0, (uint8_t * ) & boot_mode, 1);//è¿›å…¥å¼•å¯¼
+			LED1_OFF;
+			#define 	NUM  16
+			for (int i = 0; i < 12 * 1024 / NUM; i += 4) {
+				uint32_t c[NUM];
+				EEPROM_ReadBuffer(0x41000 + i * NUM, (uint8_t * )
+				c, NUM * 4);
+				write_to_memory1(0x20000800 + i * NUM, c, NUM);
+			}
+			jump_to_app();
         }
-        EEPROM_WriteBuffer(0X01FF0, (uint8_t * ) & boot_mode, 1);//½øÈëÒıµ¼
-        LED1_OFF;
-#define NUM  16
-        for (int i = 0; i < 12 * 1024 / NUM; i += 4) {
-            uint32_t c[NUM];
-            EEPROM_ReadBuffer(0x41000 + i * NUM, (uint8_t * )
-            c, NUM * 4);
-            write_to_memory1(0x20000800 + i * NUM, c, NUM);
-        }
-        jump_to_app();
+		// ä¸´æ—¶è®¾ç½®PA10ä¸ºä¸Šæ‹‰è¾“å…¥
+		GPIO_PinPuPdConfig(GPIOA, GPIO_PIN_10, GPIO_PuPd_UP);
+		
+		// é…ç½®PA3ä¸ºæ¨æŒ½è¾“å‡º
+		GPIO_InitTypeDef GPIO_InitStruct;
+		GPIO_InitStruct.GPIO_Pin = GPIO_PIN3;
+		GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT_PP;  // æ¨æŒ½è¾“å‡º?:ml-citation{ref="5,6" data="citationList"}
+		GPIO_InitStruct.GPIO_Speed = GPIO_Speed_10MHz; // 10MHzé€Ÿåº¦?:ml-citation{ref="4,6" data="citationList"}
+		GPIO_Init(GPIOA, &GPIO_InitStruct);
+    
+		// æ·»åŠ æ¶ˆæŠ–å»¶æ—¶
+		DelayMs(10);
+		
+		// äºŒæ¬¡ç¡®è®¤æŒ‰é”®çŠ¶æ€
+		if(!GPIO_GetBit(GPIOA, GPIO_PIN10)) 
+		{
+			GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_I2C1);  // é€‰æ‹©å¤ç”¨åŠŸèƒ½å·?:ml-citation{ref="1,3" data="citationList"}
+			GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_OD;  // å¤ç”¨å¼€æ¼æ¨¡å¼?:ml-citation{ref="1,4" data="citationList"}
+			GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;  // é«˜é€Ÿæ¨¡å¼é€‚é…I2C?:ml-citation{ref="2,5" data="citationList"}
+			GPIO_Init(GPIOA, &GPIO_InitStruct);  //?:ml-citation{ref="1,4" data="citationList"}
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE); // æ—¶é’Ÿä½¿èƒ½?:ml-citation{ref="3,4" data="citationList"}
+
+			EEPROM_WriteBuffer(0X01FF0, (uint8_t * ) & boot_mode, 1);//è¿›å…¥å¼•å¯¼
+			LED1_OFF;
+			
+			#define NUM  16
+			for (int i = 0; i < 12 * 1024 / NUM; i += 4) {
+				uint32_t c[NUM];
+				EEPROM_ReadBuffer(0x41000 + i * NUM, (uint8_t * )
+				c, NUM * 4);
+				write_to_memory1(0x20000800 + i * NUM, c, NUM);
+			}
+			jump_to_app();
+		}
     }
     boot_to_app();
 }
-
